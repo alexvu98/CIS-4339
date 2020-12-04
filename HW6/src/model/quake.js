@@ -20,7 +20,7 @@ const quakeSchema = mongoose.Schema({
     magNst : {type: Number},
     locationSource :{type: String},
     magSource : {type: String},
-    updated: {String}
+    updated: { type: String}
 
 });
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>4339 Country Information</h1>
+    <div id="userSelection">
+        <label >Search by Country</label>
+        <input id='searchCountry' type="text">
+        <input type="button" id='goCountry' onclick="getCountry();" value="Go">  </input> &nbsp; &nbsp; &nbsp; &nbsp;
+        <label for='regions'> Search by Region</label>
+        <select name="regions" id="regions">
+            <option value="empty">  </option>
+            <option value="africa"> Africa </option>
+            <option value="americas"> Americas </option>
+            <option value="asia"> Asia </option>
+            <option value="europe"> Europe </option>
+            <option value="oceania"> Oceania </option>
+        </select>
+        <button id= 'goRegion' onclick="getRegion()"> Go </button>
+    </div>
+    <p id="results"></p>
+</body> 
+</html>

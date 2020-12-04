@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <%- include ('partials/header') %> 
+    <p>This application uses the Star Wars API aka SWAPI</p>
+    <p>Type in the name of the movie you want to see information about</p>
+    <p>Here is a list of the movies you can search for: </p>
+    <ul>
+        <li>A New Hope</li>
+        <li>The Empire Strikes Back</li>
+        <li>Return of the Jedi</li>
+        <li>The Phantom Menace</li>
+        <li>Attack of the Clones</li>
+        <li>Revenge of the Sith</li>
+    </ul>
+    <form action="/movieInfo" method="GET" id="movieSearch">
+        <input type="text" name="movieName">
+        <input type="submit" value="search">
+    </form>
+    <br><br>
+    <a href="/register" class="btn">Register a New User!</a>
+    <br><br>
+    <%- include ('partials/footer') %> 
+</body>
+</html>

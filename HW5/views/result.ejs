@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Results</title>
+</head>
+
+<body id="results">
+    <%- include ('partials/header') %> 
+    <div id="output">
+        <h2>API Results</h2>
+        <p> <b> Title: </b> <%= movieResults.title %> </p>    
+        <p> <b> Release Date: </b> <%= movieResults.release_date %> </p>
+        <p> <b> Opening: </b> <%= movieResults.opening_crawl %> </p>
+        <br><br>
+    </div>
+    <%- include ('partials/footer') %> 
+</body>
+</html>

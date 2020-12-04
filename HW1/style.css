@@ -1,0 +1,33 @@
+header {
+    padding-bottom: 50px;
+    background-image: url(image.png);
+    background-size: contain;
+}
+
+#tables {
+    padding-top: 50px;
+}
+
+table, th, td{
+    border: 1px solid black;
+}
+
+th {
+    color: red;
+}
+
+footer {
+    padding-top: 100px;
+}
+
+footer ul {
+    margin: 0; 
+    padding: 0; 
+}
+
+footer li {
+    list-style-type: none;
+    padding-right: 5px;
+    display: inline;
+    margin:0;
+}

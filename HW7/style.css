@@ -1,0 +1,22 @@
+
+.container {
+    text-align: center; 
+ }
+
+table.rangedTable, table.infantryTable {
+    display: inline-block;
+    padding: 40px;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+th, td {
+    border: 1px solid black; 
+    border-collapse: collapse;
+}
+
+tfoot {
+    color: red;
+    font-weight: bold;
+}

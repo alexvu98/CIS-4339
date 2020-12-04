@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>CIS 4339 HW7</title>
+</head>
+<body>
+    <div id='app'>
+        <h1> {{ pageName }} </h1>
+        <div class='container'>
+            <table class="rangedTable" v-bind:class = myClasses >
+                <caption> <b> Ranged Units </b></caption>
+                <tr>
+                    <th>Unit Name</th>
+                    <th>Cost</th>
+                </tr>
+
+                <tr v-for='unit in filterRanged'>
+                    <td > {{ unit.unit }} </td>
+                    <td > {{ unit.cost }} </td>
+                </tr>
+
+                <tfoot>
+                    <tr>
+                        <td>Total Cost</td>
+                        <td> {{ sumRangedCost() }} </td>
+                    </tr>
+                </tfoot>
+                
+            </table>
+
+            <table class='infantryTable' v-bind:class = myClasses >
+                <caption> <b> Infantry Units </b></caption>
+                <tr>
+                    <th>Unit Name</th>
+                    <th>Cost</th>
+                </tr>
+
+                <tr v-for='unit in filterInfantry'>
+                    <td > {{ unit.unit }} </td>
+                    <td > {{ unit.cost }} </td>
+                </tr>
+
+                <tfoot>
+                    <tr>
+                        <td>Total Cost</td>
+                        <td> {{ sumInfantryCost() }} </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

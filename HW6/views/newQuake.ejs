@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW6</title>
+</head>
+<body>
+    <%- include ('partials/header') %> 
+
+    <div id="form">
+        <h3>Record a new earthquake:</h3>
+        <form action="/addQuake" method="POST">
+            <label for="id">Research ID</label>
+            <input type="text" id="id" name="id"><br><br>
+    
+            <label for="time">Date and Time</label>
+            <input type="datetime-local" id="time" name="time"><br><br>
+    
+            <label for="latitude">Latitude</label>
+            <input type="number" step="any" id="latitude" name="latitude"><br><br>
+    
+            <label for="longitude">Longitude</label>
+            <input type="number" step="any" id="longitude" name="longitude"><br><br>
+    
+            <label for="depth">Depth</label>
+            <input type="number" id="depth" name="depth"><br><br>
+    
+            <label for="mag">Magnitude</label>
+            <input type="number" step="any" id="mag" name="mag"><br><br>
+    
+            <label for="magType">Magnitude Type</label>
+            <input type="text" id="magType" name="magType"><br><br>
+
+            <label for="nst">Number of Seismic Stations</label>
+            <input type="number" id="nst" name="nst"><br><br>
+    
+            <label for="gap">Gap</label>
+            <input type="number" step="any" id="gap" name="gap"><br><br>
+
+            <label for="dmin">Dmin</label>
+            <input type="number" step="any" id="dmin" name="dmin"><br><br>
+
+            <label for="rms">RMS</label>
+            <input type="number" step="any" id="rms" name="rms"><br><br>
+
+            <label for="net">Net</label>
+            <input type="String" id="net" name="net"><br><br>
+    
+            <label for="place">Place of Earthquake</label>
+            <input type="text" id="place" name="place"><br><br>
+
+            <label for="horizontalError">Horizontal Error</label>
+            <input type="number" step=0.01 id="horizontalError" name="horizontalError"><br><br>
+    
+            <label for="depthError">Depth Error</label>
+            <input type="number" step=0.01 id="depthError" name="depthError"><br><br>
+    
+            <label for="magError">Magnitude Error</label>
+            <input type="number" step="any" id="magError" name="magError"><br><br>
+
+            <label for="magNst">Magnitude Nst</label>
+            <input type="number" step="any" id="magNst" name="magNst"><br><br>
+    
+            <label for="locationSource">Location Source</label>
+            <input type="text" id="locationSource" name="locationSource"><br><br>
+    
+            <label for="magSource">Magnitude Source</label>
+            <input type="text" id="magSource" name="magSource"><br><br>
+
+            <label for="updated">Updated</label>
+            <input type="datetime-local" id="updated" name="updated"><br><br>
+            
+            <input type="submit">
+        </form>
+    </div>
+    <%- include ('partials/footer') %> 
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>HW6</title>
+</head>
+<body>
+    <%- include ('partials/header') %> 
+    <h3>Earthquake Data:</h3>
+
+    <div class="tableData">
+        <table>
+            <tr>
+                <th>ReasearchID</th>
+                <th>Time</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Depth</th>
+                <th>Magnitude</th>
+                <th>Mag Type</th>
+                <th>Number of Seismic Stations</th>
+                <th>Gap</th>
+                <th>DMin</th>
+                <th>Rms</th>
+                <th>net</th>
+                <th>Place</th>
+                <th>Horizontal Error</th>
+                <th>Depth Error</th>
+                <th>MagError</th> 
+                <th>Mag Nst</th> 
+                <th>Location Source</th> 
+                <th>Mag Source</th>  
+                <th>Updated</th>  
+                <th>Action</th>  
+            </tr>
+            <% quakeResult.forEach((quake) => { %>
+            <tr>
+                <td><%= quake.id %></td>
+                <td><%= quake.time %></td>
+                <td><%= quake.latitude %></td>
+                <td><%= quake.longitude %></td>
+                <td><%= quake.depth %></td>
+                <td><%= quake.mag %></td>
+                <td><%= quake.magType %></td>
+                <td><%= quake.nst %></td>
+                <td><%= quake.gap %></td>
+                <td><%= quake.dmin %></td>
+                <td><%= quake.rms %></td>
+                <td><%= quake.net.toUpperCase() %></td>
+                <td><%= quake.place %></td>
+                <td><%= quake.horizontalError %></td>
+                <td><%= quake.depthError %></td>
+                <td><%= quake.magError %></td>
+                <td><%= quake.magNst %></td>
+                <td><%= quake.locationSource.toUpperCase() %></td>
+                <td><%= quake.magSource.toUpperCase() %></td>
+                <td><%= quake.updated %></td>
+                <td>
+                   <a href='/delete/<%= quake._id %>'>Delete</a>
+                </td>
+            </tr>
+           <% }) %>
+        </table>
+    </div>
+
+    <%- include ('partials/footer') %> 
+</body>
+</html>
